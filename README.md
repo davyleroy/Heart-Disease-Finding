@@ -64,6 +64,37 @@ The following libraries were utilized in the implementation:
 
 - The confusion matrix was plotted to visualize the performance of the models, providing insights into true positives, false positives, true negatives, and false negatives.
 
+## Instructions for Running the Notebook
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/davyleroy/Heart-Disease-Finding.git
+   cd Heart-Disease-Finding
+   ```
+
+2. **Install Required Libraries**:
+   Ensure you have the necessary libraries installed. You can use pip to install them:
+
+   ```bash
+   pip install tensorflow pandas numpy matplotlib scikit-learn seaborn
+   ```
+
+3. **Run the Notebook**:
+   Open the `notebook.ipynb` file in Jupyter Notebook or any compatible environment and execute the cells to run the analysis.
+
+## Loading Saved Models
+
+To load the saved models, you can use the following code snippet in your notebook:
+
+```python
+python
+import joblib
+Load the models
+model1 = joblib.load('saved_models/model1.pkl')
+model2 = joblib.load('saved_models/model2.pkl')
+```
+
 ### Conclusion
 
 By harnessing the power of AI, we aim to revolutionize the way heart diseases are diagnosed, making the process more efficient and reliable for healthcare providers and patients alike.
