@@ -15,7 +15,7 @@ The primary goal of this project is to enhance the diagnosis of heart diseases t
 
 This notebook contains the implementation of the AI model designed for heart disease diagnosis. It includes data preprocessing, model training, and evaluation steps, showcasing how AI can be integrated into healthcare practices.
 
-### Model Implementation
+## Model Implementation
 
 We implemented two models to evaluate their performance:
 
@@ -42,15 +42,16 @@ We implemented two models to evaluate their performance:
 
 The following libraries were utilized in the implementation:
 
-```
 ### Parameter Settings
 
 - **Data Preprocessing**:
+
   - The dataset was split into training and testing sets using `train_test_split`.
   - Features were standardized using `StandardScaler` to improve model performance.
   - Categorical variables were encoded using `LabelEncoder`.
 
 - **Model Architecture**:
+
   - The simple model consisted of a basic feedforward neural network.
   - The optimized model included additional layers and applied L1 regularization to prevent overfitting.
 
@@ -66,4 +67,3 @@ The following libraries were utilized in the implementation:
 ### Conclusion
 
 By harnessing the power of AI, we aim to revolutionize the way heart diseases are diagnosed, making the process more efficient and reliable for healthcare providers and patients alike.
-```
