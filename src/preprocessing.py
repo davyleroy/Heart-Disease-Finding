@@ -1,23 +1,21 @@
+# preprocessing.py
 import pandas as pd
-from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 
-filepaths = {
-    "train": "data/train.csv",
-    "test": "data/test.csv"
-}
-
-def load_and_clean_data(filepath):
-    df = pd.read_csv(filepath)
-    df.dropna(inplace=True)
-    df.drop_duplicates(inplace=True)
-    return df
-
-def encode_features(df, categorical_columns):
-    encoder = LabelEncoder()
-    for col in categorical_columns:
-        df[col] = encoder.fit_transform(df[col])
-    return df
-
-def scale_data(X):
+def preprocess_data(df):
+    # Convert categorical variables
+    df['sex'] = df['sex'].map({'male': 0, 'female': 1})
+    
+    # Separate features and target
+    X = df.drop('target', axis=1)
+    y = df['target']
+    
+    # Scale features
     scaler = StandardScaler()
-    return scaler.fit_transform(X)
+    X_scaled = scaler.fit_transform(X)
+    
+    return X_scaled, y, scaler
+
+def split_data(X, y):
+    return train_test_split(X, y, test_size=0.2, random_state=42)

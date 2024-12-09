@@ -1,0 +1,37 @@
+.home-container {
+  background-color: white; /* White background */
+  padding: 2rem;
+  text-align: center; /* Center text */
+  min-height: 100vh; /* Full height */
+}
+
+.home-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 1rem 0; /* Spacing around the image */
+  transition: opacity 0.5s ease; /* Smooth transition for image change */
+}
+
+h1 {
+  color: #007bff; /* Heading color */
+}
+
+p {
+  color: black; /* Set font color of Lorem Ipsum text to black */
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-strip {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image {
+  min-width: 100%;
+  height: auto;
+}
